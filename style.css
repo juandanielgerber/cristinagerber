@@ -1,143 +1,87 @@
-body{
 
-margin:0;
-
-font-family:'Space Grotesk',sans-serif;
-
-background:#f3f1ed;
-
-color:#1d1d1d;
-
+@font-face {
+font-family: "AeonikFono";
+src: url("fonts/AeonikFono-Regular.otf") format("opentype");
+font-weight: 400;
 }
 
+@font-face {
+font-family: "AeonikFono";
+src: url("fonts/AeonikFono-Black.otf") format("opentype");
+font-weight: 800;
+}
 
-/* NAVIGATION */
+:root{
+--bg:#F3F1ED;
+--text:#1D1D1D;
+}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--text);
+font-family:"AeonikFono", sans-serif;
+}
 
 .nav{
-
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
 padding:60px 140px;
-
 }
-
 
 .logo{
-
-font-size:30px;
-
+font-size:32px;
 font-weight:400;
-
-letter-spacing:0.5px;
-
 }
-
 
 .menu{
-
 display:flex;
-
 gap:40px;
-
 align-items:center;
-
 font-size:18px;
-
 }
-
 
 .menu span{
-
 cursor:pointer;
-
 }
-
 
 .lang span{
-
-margin-left:10px;
-
-opacity:0.6;
-
+margin-left:12px;
+opacity:.6;
+cursor:pointer;
 }
-
-
-/* MAIN LAYOUT */
 
 .layout{
-
 max-width:1200px;
-
 margin:120px auto;
-
 display:flex;
-
 gap:120px;
-
 align-items:flex-start;
-
 }
-
 
 .photo{
-
 width:360px;
-
-border-radius:6px;
-
+border-radius:4px;
 }
-
-
-/* TEXT */
 
 .text{
-
 max-width:600px;
-
-line-height:1.8;
-
 font-size:18px;
-
+line-height:1.8;
 }
-
 
 h1{
-
 font-size:34px;
-
+font-weight:400;
 margin-bottom:40px;
-
-font-weight:400;
-
 }
-
-
-h2{
-
-font-size:24px;
-
-margin-top:40px;
-
-font-weight:400;
-
-}
-
 
 .service{
-
 margin-bottom:20px;
-
 }
 
-
 .contact{
-
 margin-top:30px;
-
 line-height:1.8;
-
 }
