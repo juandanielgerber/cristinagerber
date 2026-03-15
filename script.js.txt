@@ -1,0 +1,40 @@
+let lang="de"
+
+const content={
+
+de:{
+title:"Über mich",
+text1:"Psychologin MSc Psychotherapeutin mit CBT-Schwerpunkt mit Erfahrung in Depression, Angst und Trauma bei Kindern und Erwachsenen.",
+text2:"Weitere Informationen folgen."
+},
+
+en:{
+title:"About me",
+text1:"Psychologist MSc Psychotherapist with a CBT concentration with experience in depression, anxiety and trauma in children and adults.",
+text2:"More information coming soon."
+},
+
+es:{
+title:"Sobre mí",
+text1:"Psicóloga y psicoterapeuta MSc con enfoque en TCC con experiencia en depresión, ansiedad y trauma en niños y adultos.",
+text2:"Más información próximamente."
+}
+
+}
+
+function switchLanguage(l){
+
+lang=l
+update()
+
+}
+
+function update(){
+
+document.getElementById("title").innerText=content[lang].title
+document.getElementById("text1").innerText=content[lang].text1
+document.getElementById("text2").innerText=content[lang].text2
+
+}
+
+update()
