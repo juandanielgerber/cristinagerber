@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristina Gerber - Psychologische Beratung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        headerBg: '#eba8db',      /* Pink header background */
+                        headerText: '#871b6b',    /* Dark pink/purple logo text */
+                        navText: '#ffffff',       /* White nav links */
+                        bgTop: '#bde2f0',         /* Light blue gradient start */
+                        bgBottom: '#f2f8fa',      /* Lighter blue gradient end */
+                        heroLight: '#e49ed7',     /* Light pink large text */
+                        heroDark: '#c64db6',      /* Dark pink large text */
+                        bodyText: '#6f1958'       /* Dark pink/purple body text */
+                    },
+                    fontFamily: {
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for the overlapping hero text */
+        .hero-text-container {
+            font-weight: 900;
+            line-height: 0.8;
+            letter-spacing: -0.02em;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-bgTop to-bgBottom min-h-screen font-sans text-bodyText flex flex-col m-0 p-0">
+
+    <header class="bg-headerBg w-full px-6 py-4 flex justify-between items-center shadow-sm relative z-30">
+        <div class="text-headerText font-extrabold text-2xl tracking-wide cursor-pointer" onclick="showSection('home')">
+            Cristina Gerber
+        </div>
+        <nav class="space-x-4 md:space-x-8 text-navText font-bold text-lg md:text-xl flex items-center">
+            <a href="#" onclick="showSection('about')" class="hover:text-headerText transition-colors" data-i18n="nav_about">Über mich</a>
+            <a href="#" onclick="showSection('services')" class="hover:text-headerText transition-colors" data-i18n="nav_services">Leistungen</a>
+            <a href="#" onclick="showSection('contact')" class="hover:text-headerText transition-colors" data-i18n="nav_contact">Kontakt</a>
+            
+            <div class="relative inline-block text-left">
+                <button onclick="toggleLangMenu()" class="hover:text-headerText transition-colors focus:outline-none" data-i18n="nav_lang">Sprache</button>
+                <div id="langMenu" class="hidden absolute right-0 mt-2 w-24 bg-white rounded-md shadow-lg z-50 overflow-hidden">
+                    <a href="#" onclick="changeLanguage('de')" class="block px-4 py-2 text-sm text-bodyText hover:bg-bgTop hover:text-headerText font-normal">DE</a>
+                    <a href="#" onclick="changeLanguage('en')" class="block px-4 py-2 text-sm text-bodyText hover:bg-bgTop hover:text-headerText font-normal">EN</a>
+                    <a href="#" onclick="changeLanguage('es')" class="block px-4 py-2 text-sm text-bodyText hover:bg-bgTop hover:text-headerText font-normal">ES</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-8 py-12 md:py-24 relative z-10">
+        
+        <section id="home" class="w-full flex flex-col justify-center h-full">
+            <div class="hero-text-container text-[4rem] md:text-[8rem] uppercase w-full">
+                <div class="text-heroLight break-words" data-i18n="hero_1">Psychologische</div>
+                <div class="text-heroDark -mt-2 md:-mt-6 relative z-10 break-words" data-i18n="hero_2">Beratung</div>
+                <div class="text-heroLight -mt-2 md:-mt-6 break-words" data-i18n="hero_3">Paar Therapie</div>
+                <div class="text-heroLight -mt-2 md:-mt-6 break-words" data-i18n="hero_4">Interkulturelle</div>
+                <div class="text-heroDark -mt-2 md:-mt-6 relative z-10 break-words" data-i18n="hero_5">Beratung</div>
+            </div>
+        </section>
+
+        <section id="about" class="hidden w-full flex flex-col md:flex-row gap-12">
+            <div class="w-full md:w-1/3">
+                <img src="profile.jpg" alt="Cristina Gerber" class="w-full h-auto object-cover">
+            </div>
+            <div class="w-full md:w-2/3 text-lg md:text-xl leading-relaxed">
+                <h1 class="text-3xl font-bold mb-0">Cristina Gerber</h1>
+                <h2 class="text-2xl font-bold mb-6">Psychologist MSc</h2>
+                <p class="mb-4">Psychotherapist with a CBT concentration with experience in depression, anxiety, trauma both in Children and Adults.</p>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>
+        </section>
+
+        <section id="services" class="hidden w-full max-w-5xl mx-auto">
+            <div class="mb-10 text-lg md:text-xl leading-relaxed">
+                <h2 class="text-2xl font-bold mb-1" data-i18n="srv_1">Psychologische Beratung</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="mb-10 text-lg md:text-xl leading-relaxed">
+                <h2 class="text-2xl font-bold mb-1" data-i18n="srv_2">Paar-Therapie</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="mb-10 text-lg md:text-xl leading-relaxed">
+                <h2 class="text-2xl font-bold mb-1" data-i18n="srv_3">Interkullturelle Beratung</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="hidden w-full max-w-4xl mx-auto mt-12 text-center">
+            <div class="text-xl md:text-2xl leading-loose font-medium">
+                <p>Eugen-Martin-Strasse 21a</p>
+                <p class="mb-6">79106 Freiburg</p>
+                <p class="mb-2"><a href="mailto:gerbercristina@gmail.com" class="hover:underline">gerbercristina@gmail.com</a></p>
+                <p>+49 157 30305796</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // 1. Tab Navigation
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main > section');
+            sections.forEach(sec => sec.classList.add('hidden'));
+            const target = document.getElementById(sectionId);
+            if (target) target.classList.remove('hidden');
+        }
+
+        // 2. Language Menu Toggle
+        function toggleLangMenu() {
+            const menu = document.getElementById('langMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Close dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('[data-i18n="nav_lang"]')) {
+                const menu = document.getElementById('langMenu');
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+            }
+        }
+
+        // 3. Translation Dictionary
+        const translations = {
+            de: {
+                nav_about: "Über mich", nav_services: "Leistungen", nav_contact: "Kontakt", nav_lang: "Sprache",
+                hero_1: "Psychologische", hero_2: "Beratung", hero_3: "Paar Therapie", hero_4: "Interkulturelle", hero_5: "Beratung",
+                srv_1: "Psychologische Beratung", srv_2: "Paar-Therapie", srv_3: "Interkullturelle Beratung"
+            },
+            en: {
+                nav_about: "about me", nav_services: "services", nav_contact: "contact", nav_lang: "language",
+                hero_1: "Psychologic", hero_2: "Counseling", hero_3: "Couples Therapy", hero_4: "Intercultural", hero_5: "Counseling",
+                srv_1: "Psychologic Counseling", srv_2: "Couples Therapy", srv_3: "Intercultural Counseling"
+            },
+            es: {
+                nav_about: "sobre mi", nav_services: "servicios", nav_contact: "contacto", nav_lang: "lenguaje",
+                hero_1: "Consejo", hero_2: "Psicologico", hero_3: "Therapiadepareja", hero_4: "Consejo", hero_5: "Intercultural",
+                srv_1: "Consejo Psicologico", srv_2: "Therapiadepareja Consejo", srv_3: "Consejo Intercultural"
+            }
+        };
+
+        // 4. Change Language Function
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang; // Update HTML lang attribute
+        }
+
+        // Initialize default view
+        showSection('home');
+    </script>
+</body>
+</html>
